@@ -9,7 +9,7 @@ export class AppComponent  {
   name = 'Angular';
   
    constructor (private router : Router) {}
-  page1(){
+  input(){
     this.router.navigate(['/page1']);
   }
   page2()
