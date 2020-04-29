@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class Page1Component implements OnInit {
 
   constructor() { }
-
+  angka=""
   ngOnInit() {
   }
-
+  
 }
