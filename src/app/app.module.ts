@@ -13,7 +13,7 @@ const ROUTES:Routes=[
   }
   ,
   {
-    path:'page2',component:Page2Component
+    path:'page2/:hasil',component:Page2Component
   }
 ]
 @NgModule({

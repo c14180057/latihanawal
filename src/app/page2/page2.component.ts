@@ -11,7 +11,7 @@ export class Page2Component implements OnInit {
   constructor(private route: ActivatedRoute,private router : Router ) { }
   res;
   ngOnInit() {
-     this.res = this.route.snapshot.paramMap.get('hsl');
+     this.res = this.route.snapshot.paramMap.get('hasil');
   }
   back()
   {

@@ -169,7 +169,7 @@ export class Page1Component implements OnInit {
         this.result=this.ang1-this.ang2
       }
       
-    this.router.navigate(['/page2']);
+    this.router.navigate(['/page2',this.result]);
     }
   }
 }
