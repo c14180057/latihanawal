@@ -7,13 +7,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent  {
   name = 'Angular';
-  
-   constructor (private router : Router) {}
-  input(){
+  constructor(private router : Router) {}
+   ngOnInit() {
     this.router.navigate(['/page1']);
-  }
-  page2()
-  {
-      this.router.navigate(['/page2']);
   }
 }
