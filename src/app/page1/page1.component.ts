@@ -48,20 +48,21 @@ export class Page1Component implements OnInit {
     else if(angka=="9")
     {
       this.text=this.text+"9"
+       alert(angka)
     }
-    else if(angka=="min")
+    else if(angka=="10")
     {
       this.text=this.text+"-"
     }
-    else if(angka=="plus")
+    else if(angka=="11")
     {
       this.text=this.text+"+"
     }
-    else if(angka=="mul")
+    else if(angka=="12")
     {
       this.text=this.text+"*"
     }
-    else if(angka=="equal")
+    else if(angka=="13")
     {
       this.text=this.text+"="
     }
