@@ -20,6 +20,10 @@ export class Page1Component implements OnInit {
   operator=false
   ngOnInit() {
   }
+  getresult()
+  {
+    return this.result
+  }
   test(angka)
   {
     if(angka=="1")
