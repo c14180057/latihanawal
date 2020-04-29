@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-page1',
   templateUrl: './page1.component.html',
@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page1Component implements OnInit {
 
-  constructor() { }
+ constructor (private router : Router) {}
+  
   text=""
   angka1="";
   angka2="";
   ops="";
+  result;
   ang1;
   ang2;
   operator=false
@@ -131,23 +133,38 @@ export class Page1Component implements OnInit {
     {
       this.text=this.text+"-"
       this.operator=true
+      this.ops="-"
     }
     else if(angka=="11")
     {
       this.text=this.text+"+"
       this.operator=true
+      this.ops="+"
     }
     else if(angka=="12")
     {
       this.text=this.text+"*"
       this.operator=true
+      this.ops="*"
     }
     else if(angka=="13")
     {
       this.ang1=parseInt(this.angka1)
       this.ang2=parseInt(this.angka2)
-      alert(this.ang1)
-      alert(this.ang2)
+      if(this.ops=="+")
+      {
+        this.result=this.ang1+this.ang2
+      }
+      else if(this.ops=="*")
+      {
+        this.result=this.ang1*this.ang2
+      }
+      else
+      {
+        this.result=this.ang1-this.ang2
+      }
+      
+    this.router.navigate(['/page2']);
     }
   }
 }
