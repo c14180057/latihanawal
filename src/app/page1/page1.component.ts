@@ -146,7 +146,8 @@ export class Page1Component implements OnInit {
     {
       this.ang1=parseInt(this.angka1)
       this.ang2=parseInt(this.angka2)
-      
+      alert(this.ang1)
+      alert(this.ang2)
     }
   }
 }
