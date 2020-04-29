@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Page1Component } from '../page1/page1.component';
+import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-page2',
@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
 })
 export class Page2Component implements OnInit {
 
-  constructor(private pageComponent: Page1Component,private router : Router ) { }
+  constructor(private route: ActivatedRoute,private router : Router ) { }
   res;
   ngOnInit() {
-    // this.res=this.pageComponent.getresult()
+     this.res = this.route.snapshot.paramMap.get('hsl');
   }
   back()
   {
