@@ -13,11 +13,11 @@ const ROUTES:Routes=[
   }
   ,
   {
-    path:'edit',component:Page2Component
+    path:'page2',component:Page2Component
   }
 ]
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(ROUTES) ],
   declarations: [ AppComponent, HelloComponent, Page1Component, Page2Component ],
   bootstrap:    [ AppComponent ]
 })
